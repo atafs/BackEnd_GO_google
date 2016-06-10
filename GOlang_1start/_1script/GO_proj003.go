@@ -4,21 +4,21 @@ import "fmt"
 
 //MAIN
 func main() {
-    
+
     //#######################################
     //VAR CONSTANT
-    const pi float64 = 3.14159265 
-    
+    const pi float64 = 3.14159265
+
     //VAR OTHER SINTAXE
     var(
         varA = 2
         varB = 3
     )
-    
+
     //VAR STRING
     var myName string = "Americo Tomas"
     var myNameLength int = len(myName)
-    
+
     //VAR BOOLEAN
     var isOver40 bool = true
 
@@ -28,10 +28,12 @@ func main() {
     fmt.Println(varA,varB)
     fmt.Println(myName)
     fmt.Println(myNameLength)
-    
+
     //PRINT CONCATENATION
-    fmt.Println(myName + " is my name " + and myNameLength + " is the length of my name")
-    
+    fmt.Println(myName, " is my name and ", myNameLength, " is the length of my name")
+    fmt.Println("Over 40 variable = ", isOver40,)
+
+
     //PRINT USING PRINTF
     fmt.Printf("%.3f \n", pi)
     fmt.Printf("DATA TYPE: %T \n", pi)
@@ -42,12 +44,12 @@ func main() {
     fmt.Printf("%x \n", 100)
     fmt.Printf("%e \n", pi)
 
-    
-    
 
 
 
-    
-    
-    
+
+
+
+
+
 }

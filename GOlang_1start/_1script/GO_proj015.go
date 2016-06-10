@@ -5,9 +5,9 @@ import "math"
 
 //MAIN
 func main() {
-    
+
     //#######################################
-    //VAR 
+    //VAR
     rect := Rectangle{20,50}
     circ := Circle{4}
 
@@ -15,7 +15,7 @@ func main() {
     //PRINT
     fmt.Println("RECTANGLE AREA = ", getArea(rect))
     fmt.Println("CIRCLE AREA = ", getArea(circ))
-  
+
 }
 
 //#######################################
@@ -45,7 +45,7 @@ func (r Rectangle) area() float64 {
 }
 
 //FUNC
-func (r Circle) area() float64 {
+func (c Circle) area() float64 {
     return math.Pi * math.Pow(c.radius, 2)
 }
 
@@ -53,8 +53,3 @@ func (r Circle) area() float64 {
 func getArea(shape Shape) float64 {
     return shape.area()
 }
-
-
-
-
-

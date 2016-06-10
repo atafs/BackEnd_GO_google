@@ -7,15 +7,14 @@ import (
 
 //MAIN
 func main() {
-    
+
     //#######################################
-    //HTTP WEB SERVER 
+    //HTTP WEB SERVER
     http.HandleFunc("/", handler)
     http.HandleFunc("/earth", handler2)
-    
+
     //LISTENER
-    http.ListenAndServe(".8080", nil)
-      
+    http.ListenAndServe(":8080", nil)
 }
 
 //#######################################

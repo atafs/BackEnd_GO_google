@@ -6,12 +6,11 @@ import (
 
 //MAIN
 func main() {
-    
+
     //#######################################
     //PRINT
     fmt.Printf("Hello World Americo Tomas - %s\n", "Ana Batalha")
-	
-	fmt.Printf("Hello World Americo Tomas - %s\n", new(World))    
+	  fmt.Printf("Hello World Americo Tomas - %s\n", new(World))    
 }
 
 //#######################################

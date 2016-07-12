@@ -13,7 +13,7 @@ var (
 
 func main() {
 	const f = "%T(%v)\n"
-	fmt.Printf(f, ToBe, ToBe)
-	fmt.Printf(f, MaxInt, MaxInt)
-	fmt.Printf(f, z, z)
+	fmt.Println(f, ToBe, ToBe)
+	fmt.Println(f, MaxInt, MaxInt)
+	fmt.Println(f, z, z)
 }

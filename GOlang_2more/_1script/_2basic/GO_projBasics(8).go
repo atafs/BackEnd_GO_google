@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//VAR GLOBAL
 var c, python, java bool
 
 func main() {

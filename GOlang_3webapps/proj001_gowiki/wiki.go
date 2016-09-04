@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-
 )
 
 //data structure
@@ -29,20 +28,16 @@ func loadPage(title string) (*Page, error) {
 }
 
 //create a simple web server
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+		p, _ := loadPage("page/first_page")
+    fmt.Fprintf(w, "<h1>Path of page: '%s'</h1><div>%s</div>", p.Title, p.Body)
 }
 
 func main() {
-		//create a simple file page
-    p1 := &Page{Title: "TestPage", Body: []byte("This is a sample Page.")}
-    p1.save()
-    p2, _ := loadPage("TestPage")
-    fmt.Println(string(p2.Body))
-
 		//create a simple web server
 		fmt.Println("running the server at localhost:8080...")
-		http.HandleFunc("/", handler)
+		http.HandleFunc("/view/", viewHandler)
+
 	 	http.ListenAndServe(":8080", nil)
 
 

@@ -1,5 +1,5 @@
 REM build
-go build wiki.go
+go build server.go
 
 REM run
 cls

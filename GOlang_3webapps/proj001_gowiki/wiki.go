@@ -29,8 +29,12 @@ func loadPage(title string) (*Page, error) {
 
 //create a simple web server
 func viewHandler(w http.ResponseWriter, r *http.Request) {
-		p, _ := loadPage("page/first_page")
-    fmt.Fprintf(w, "<h1>Path of page: '%s'</h1><div>%s</div>", p.Title, p.Body)
+		//get name from url to open the file
+		title := r.URL.Path[len("/view/"):]
+		//add the name to the folder location
+		page := "page/" + title
+		p, _ := loadPage(page)
+    fmt.Fprintf(w, "<h1>'%s'.txt</h1><div>%s</div>", p.Title, p.Body)
 }
 
 func main() {
